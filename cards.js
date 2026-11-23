@@ -1,1 +1,48 @@
-const cards=[{"id":1,"group":"Functions & Change","code":"FUNCTIONS","color":"#347fbd","title":"Function and Mapping","description":"A function assigns each allowed input exactly one output. The domain, rule and range describe the mapping.","formula":"f: X → Y","file":"math-cards/01-mapping.svg","type":"mapping"},{"id":2,"group":"Functions & Change","code":"FUNCTIONS","color":"#347fbd","title":"Inverse Functions","description":"An inverse reverses a one-to-one mapping. Its graph is the reflection of the original graph in y = x.","formula":"f⁻¹(f(x)) = x","file":"math-cards/02-inverse.svg","type":"inverse"},{"id":3,"group":"Functions & Change","code":"FUNCTIONS","color":"#347fbd","title":"Exponential and Logarithmic Functions","description":"Exponential growth models repeated multiplication. A logarithm tells how many equal growth steps reach a value.","formula":"aˣ = y  ⇔  logₐ y = x","file":"math-cards/03-exp.svg","type":"exp"},{"id":4,"group":"Functions & Change","code":"FUNCTIONS","color":"#347fbd","title":"Trigonometric Functions","description":"Coordinates on the unit circle vary periodically with angle, linking circular motion to waves.","formula":"sin²θ + cos²θ = 1","file":"math-cards/04-trig.svg","type":"trig"},{"id":5,"group":"Integration","code":"CALCULUS","color":"#347fbd","title":"Limits","description":"A limit describes the value a function approaches as its input gets close to a point.","formula":"limₓ→a f(x) = L","file":"math-cards/05-limit.svg","type":"limit"},{"id":6,"group":"Integration","code":"CALCULUS","color":"#347fbd","title":"Derivatives","description":"The derivative is the slope of a tangent and the instantaneous rate of change.","formula":"f′(x) = limₕ→₀ [f(x+h)−f(x)]/h","file":"math-cards/06-derivative.svg","type":"derivative"},{"id":7,"group":"Integration","code":"CALCULUS","color":"#347fbd","title":"Definite Integrals","description":"A definite integral accumulates small contributions; geometrically it gives signed area under a curve.","formula":"∫ₐᵇ f(x) dx","file":"math-cards/07-integral.svg","type":"integral"},{"id":8,"group":"Integration","code":"CALCULUS","color":"#347fbd","title":"Fundamental Theorem of Calculus","description":"Differentiation and integration are inverse processes: accumulated change can be found from endpoint values.","formula":"∫ₐᵇ f′(x)dx = f(b)−f(a)","file":"math-cards/08-ftc.svg","type":"ftc"},{"id":9,"group":"Linear Algebra","code":"LINEAR ALGEBRA","color":"#25966e","title":"Vectors","description":"A vector has magnitude and direction. Vectors describe position, velocity, forces and data features.","formula":"v = (v₁, v₂, …, vₙ)","file":"math-cards/09-vector.svg","type":"vector"},{"id":10,"group":"Linear Algebra","code":"LINEAR ALGEBRA","color":"#25966e","title":"Matrix Transformations","description":"A matrix maps vectors to new positions. Rotation, scaling and shear can all be represented this way.","formula":"y = Ax","file":"math-cards/10-matrix.svg","type":"matrix"},{"id":11,"group":"Linear Algebra","code":"LINEAR ALGEBRA","color":"#25966e","title":"Eigenvectors and Eigenvalues","description":"An eigenvector keeps its direction under a transformation; its eigenvalue gives the scale factor.","formula":"Av = λv","file":"math-cards/11-eigen.svg","type":"eigen"},{"id":12,"group":"Linear Algebra","code":"LINEAR ALGEBRA","color":"#25966e","title":"Determinants","description":"The determinant measures signed area or volume scaling. A zero determinant means the transformation collapses space.","formula":"det(A) = 0  ⇔  A is singular","file":"math-cards/12-det.svg","type":"det"},{"id":13,"group":"Probability and Statistics","code":"PROBABILITY","color":"#d59035","title":"Conditional Probability","description":"Given that event B has occurred, conditional probability measures how likely event A is.","formula":"P(A|B) = P(A∩B) / P(B)","file":"math-cards/13-conditional.svg","type":"conditional"},{"id":14,"group":"Probability and Statistics","code":"PROBABILITY","color":"#d59035","title":"Bayes’ Theorem","description":"Bayes’ theorem updates a prior probability using new evidence to produce a posterior probability.","formula":"P(A|B) = P(B|A)P(A) / P(B)","file":"math-cards/14-bayes.svg","type":"bayes"},{"id":15,"group":"Probability and Statistics","code":"PROBABILITY","color":"#d59035","title":"Normal Distribution","description":"A symmetric bell-shaped distribution centred at its mean; the standard deviation sets its spread.","formula":"X ∼ N(μ, σ²)","file":"math-cards/15-normal.svg","type":"normal"},{"id":16,"group":"Probability and Statistics","code":"PROBABILITY","color":"#d59035","title":"Expected Value and Variance","description":"Expected value describes the long-run average. Variance measures how widely outcomes spread around it.","formula":"E[X],  Var(X)=E[(X−μ)²]","file":"math-cards/16-distribution.svg","type":"distribution"},{"id":17,"group":"Complex Numbers","code":"COMPLEX NUMBERS","color":"#8627c8","title":"The Complex Plane","description":"Real and imaginary parts form horizontal and vertical coordinates, placing each complex number on a plane.","formula":"z = a + bi","file":"math-cards/17-complex.svg","type":"complex"},{"id":18,"group":"Complex Numbers","code":"COMPLEX NUMBERS","color":"#8627c8","title":"Exponential Form","description":"Euler’s formula connects complex exponentials, angles and circular motion.","formula":"eⁱθ = cos θ + i sin θ","file":"math-cards/18-euler.svg","type":"euler"},{"id":19,"group":"Complex Numbers","code":"COMPLEX NUMBERS","color":"#8627c8","title":"Argand Diagrams","description":"An Argand diagram represents a complex number as a point or vector in the complex plane.","formula":"z = r(cos θ + i sin θ)","file":"math-cards/19-argand.svg","type":"argand"},{"id":20,"group":"Complex Numbers","code":"COMPLEX NUMBERS","color":"#8627c8","title":"de Moivre’s Theorem","description":"Raising a complex number in polar form to a power multiplies its angle and raises its modulus.","formula":"[r(cos θ+i sin θ)]ⁿ = rⁿ(cos nθ+i sin nθ)","file":"math-cards/20-demoivre.svg","type":"demoivre"}];const root=document.getElementById('groups');for(const group of [...new Set(cards.map(c=>c.group))]){const items=cards.filter(c=>c.group===group),section=document.createElement('section');section.className='group';const head=document.createElement('div');head.className='group-head';head.innerHTML='<h3 style="color:'+items[0].color+'">'+items[0].code+' ('+items[0].color+')</h3><p>'+group+'</p>';section.append(head);const grid=document.createElement('div');grid.className='grid';for(const c of items){const link=document.createElement('a');link.className='card-link';link.href=c.file;link.download=c.file.split('/').pop();link.innerHTML='<article class="card" style="--accent:'+c.color+'"><div class="card-title">'+c.title+'</div><div class="art"><img loading="lazy" src="'+c.file+'" alt="Illustration for '+c.title+'"></div><div class="card-copy"><strong>'+c.title+'</strong><p>'+c.description+'</p><div class="formula">'+c.formula+'</div></div></article><span class="download">Download individual card ↓</span>';grid.append(link)}section.append(grid);root.append(section)}
+const groups = [
+  {
+    name: "Integration",
+    className: "integration",
+    color: "#3988c3",
+    cards: [
+      ["Substitution", "math-cards/01-substitution.png"],
+      ["Integration by parts", "math-cards/02-integration-by-parts.png"],
+      ["Multiple integrals", "math-cards/03-multiple-integrals.png"],
+      ["Polar and Spherical coords", "math-cards/04-polar-and-spherical-coordinates.png"],
+      ["Centroids", "math-cards/05-centroids.png"]
+    ]
+  },
+  {
+    name: "Complex numbers",
+    className: "complex",
+    color: "#851fc5",
+    cards: [
+      ["Exponential form", "math-cards/06-exponential-form.png"],
+      ["Argand Diagrams", "math-cards/07-argand-diagrams.png"],
+      ["de Moivre's theorem", "math-cards/08-de-moivres-theorem.png"],
+      ["Complex Impedance", "math-cards/09-complex-impedance.png"]
+    ]
+  }
+];
+
+const root = document.getElementById("groups");
+for (const group of groups) {
+  const row = document.createElement("section");
+  row.className = "group-row";
+  const label = document.createElement("h3");
+  label.className = "group-label";
+  label.style.color = group.color;
+  label.textContent = group.name;
+  const cards = document.createElement("div");
+  cards.className = `cards ${group.className}`;
+  for (const [title, image] of group.cards) {
+    const item = document.createElement("a");
+    item.className = "card-link";
+    item.href = image;
+    item.download = image.split("/").pop();
+    item.setAttribute("aria-label", `Download ${title} card`);
+    item.innerHTML = `<img class="card-image" src="${image}" alt="${title} learning card"><span class="download">Download individual card</span>`;
+    cards.append(item);
+  }
+  row.append(label, cards);
+  root.append(row);
+}

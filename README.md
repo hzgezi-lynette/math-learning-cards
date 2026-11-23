@@ -1,15 +1,32 @@
-# Mathematics Learning Cards
+# Visual Mathematics: A Deck of Learning Cards
 
-A static English-language card site modelled on the reference Thermodynamics Learning Cards page structure: introductory design note, color-coded topic groups, image-led individual cards, attribution/version footer, and downloadable card files.
+**[Open the live website](https://hzgezi-lynette.github.io/math-learning-cards/)**
 
-## Files
-- `index.html`, `styles.css`, `cards.js`: the site.
-- `math-cards/`: 20 individual English SVG learning cards, each downloadable from the gallery.
-- `cards.json`: card metadata and filenames.
-- `thermodynamics-originals/SOURCE.md`: reference site citation and license note. The reference PNG files have not been downloaded.
+This README shows the same nine original learning cards as the website. Select a card image to open its individual PNG file.
 
-## Publish
-Upload the contents of this folder to a GitHub repository and enable GitHub Pages from the repository's Pages settings. This is a static site and needs no build step.
+## Learning Aids
 
-## Other publishing options
-Netlify Drop can publish a folder by drag-and-drop and provide a site URL. Cloudflare Pages can connect to a GitHub repository and deploy on each push. Vercel can also publish static sites from a repository. A custom domain can be connected to any of these hosts.
+### Integration
+
+<table>
+<tr>
+<td align="center"><a href="math-cards/01-substitution.png"><img src="math-cards/01-substitution.png" width="145" alt="Substitution card"></a><br><strong>Substitution</strong></td>
+<td align="center"><a href="math-cards/02-integration-by-parts.png"><img src="math-cards/02-integration-by-parts.png" width="145" alt="Integration by parts card"></a><br><strong>Integration by parts</strong></td>
+<td align="center"><a href="math-cards/03-multiple-integrals.png"><img src="math-cards/03-multiple-integrals.png" width="145" alt="Multiple integrals card"></a><br><strong>Multiple integrals</strong></td>
+<td align="center"><a href="math-cards/04-polar-and-spherical-coordinates.png"><img src="math-cards/04-polar-and-spherical-coordinates.png" width="145" alt="Polar and Spherical coordinates card"></a><br><strong>Polar and Spherical coordinates</strong></td>
+<td align="center"><a href="math-cards/05-centroids.png"><img src="math-cards/05-centroids.png" width="145" alt="Centroids card"></a><br><strong>Centroids</strong></td>
+</tr>
+</table>
+
+### Complex numbers
+
+<table>
+<tr>
+<td align="center"><a href="math-cards/06-exponential-form.png"><img src="math-cards/06-exponential-form.png" width="155" alt="Exponential form card"></a><br><strong>Exponential form</strong></td>
+<td align="center"><a href="math-cards/07-argand-diagrams.png"><img src="math-cards/07-argand-diagrams.png" width="155" alt="Argand Diagrams card"></a><br><strong>Argand Diagrams</strong></td>
+<td align="center"><a href="math-cards/08-de-moivres-theorem.png"><img src="math-cards/08-de-moivres-theorem.png" width="155" alt="de Moivre’s theorem card"></a><br><strong>de Moivre’s theorem</strong></td>
+<td align="center"><a href="math-cards/09-complex-impedance.png"><img src="math-cards/09-complex-impedance.png" width="155" alt="Complex Impedance card"></a><br><strong>Complex Impedance</strong></td>
+</tr>
+</table>
+
+**Cards designed by Yige Sun.** Version 1, prepared for educational use. The cards are shared under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
