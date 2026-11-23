@@ -8,7 +8,11 @@ const groups = [
       ["Integration by parts", "math-cards/02-integration-by-parts.png"],
       ["Multiple integrals", "math-cards/03-multiple-integrals.png"],
       ["Polar and Spherical coords", "math-cards/04-polar-and-spherical-coordinates.png"],
-      ["Centroids", "math-cards/05-centroids.png"]
+      ["Centroids", "math-cards/05-centroids.png"],
+      ["Improper Integrals", "math-cards/10-improper-integrals.png"],
+      ["Change of Variables", "math-cards/11-change-of-variables.png"],
+      ["Line Integrals", "math-cards/12-line-integrals.png"],
+      ["Volume by Slicing", "math-cards/13-volume-by-slicing.png"]
     ]
   },
   {
@@ -19,7 +23,11 @@ const groups = [
       ["Exponential form", "math-cards/06-exponential-form.png"],
       ["Argand Diagrams", "math-cards/07-argand-diagrams.png"],
       ["de Moivre's theorem", "math-cards/08-de-moivres-theorem.png"],
-      ["Complex Impedance", "math-cards/09-complex-impedance.png"]
+      ["Complex Impedance", "math-cards/09-complex-impedance.png"],
+      ["Complex Conjugates", "math-cards/14-complex-conjugates.png"],
+      ["Modulus and Argument", "math-cards/15-modulus-and-argument.png"],
+      ["Complex Multiplication", "math-cards/16-complex-multiplication.png"],
+      ["Roots of Unity", "math-cards/17-roots-of-unity.png"]
     ]
   }
 ];
